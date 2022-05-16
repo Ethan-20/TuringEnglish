@@ -1,8 +1,10 @@
 package com.example.turingenglish
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -14,6 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.turingenglish.databinding.ActivityIndexBinding
+import com.example.turingenglish.ui.OnItemClickListener
 import com.example.turingenglish.ui.PracticeAdapter
 import com.example.turingenglish.ui.PracticeViewModel
 import com.google.android.material.navigation.NavigationView
@@ -23,7 +26,7 @@ class IndexActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navView : NavigationView
     lateinit var recyclerView :RecyclerView
-
+    private val TAG = "IndexActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTransparent()
@@ -40,7 +43,41 @@ class IndexActivity : AppCompatActivity() {
         recyclerView = mBinding.recyclerView
         recyclerView.layoutManager = layoutManager
         val adapter = PracticeAdapter(this,PracticeViewModel.practices)
+        adapter.setOnItemClickListener(object : OnItemClickListener {
+            override fun onItemClick(Id:Int) {
+                when (Id) {
+                    Constants.reciteWords -> {
+                        //TODO 实现背单词
+                        //val intent = Intent(MyApplication.context, VocabularyActivity::class.java)
+                        Log.d(TAG,"被点击了！！！！")
+                        val intent = Intent(MyApplication.context, VocabularyActivity::class.java)
+                        startActivity(intent)
+                    }
+
+                    Constants.Reading -> {
+                        //TODO 实现阅读
+                    }
+
+                    Constants.followingSentences -> {
+                        //TODO 实现句子跟读
+                    }
+
+                    Constants.translating -> {
+                        //TODO 实现翻译
+                    }
+
+                    Constants.talkToBot->{
+                        //TODO 实现AI对话
+                    }
+
+                    Constants.comingSoon -> {
+                        //TODO 敬请期待新功能
+                    }
+                }
+            }
+        })
         recyclerView.adapter = adapter
+
     }
 
 

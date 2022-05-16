@@ -1,6 +1,7 @@
 package com.example.turingenglish.ui
 
 import androidx.lifecycle.ViewModel
+import com.example.turingenglish.Constants
 import com.example.turingenglish.R
 import com.example.turingenglish.model.Practice
 
@@ -10,11 +11,11 @@ import com.example.turingenglish.model.Practice
  */
 class PracticeViewModel :ViewModel(){
     companion object{
-        val practices = mutableListOf(Practice("背单词", R.drawable.apple),Practice("阅读模式", R.drawable.banana),Practice("句子跟读", R.drawable.cherry)
-            ,Practice("翻译", R.drawable.orange),Practice("Talk To Bot", R.drawable.grape),Practice("Coming Soon", R.drawable.mango))
-        val testPractices = mutableListOf(Practice("背单词", R.drawable.apple),Practice("阅读模式", R.drawable.banana),Practice("句子跟读", R.drawable.cherry)
-            ,Practice("翻译", R.drawable.orange),Practice("Talk To Bot", R.drawable.grape),Practice("Coming Soon", R.drawable.mango),Practice("背单词", R.drawable.apple),Practice("阅读模式", R.drawable.banana),Practice("句子跟读", R.drawable.cherry)
-            ,Practice("翻译", R.drawable.orange),Practice("Talk To Bot", R.drawable.grape),Practice("Coming Soon", R.drawable.mango),Practice("背单词", R.drawable.apple),Practice("阅读模式", R.drawable.banana),Practice("句子跟读", R.drawable.cherry)
-            ,Practice("翻译", R.drawable.orange),Practice("Talk To Bot", R.drawable.grape),Practice("Coming Soon", R.drawable.mango))
+        val practices = mutableListOf(Practice("背单词", R.drawable.apple, Constants.reciteWords),Practice("阅读模式", R.drawable.banana,Constants.Reading),Practice("句子跟读", R.drawable.cherry,Constants.followingSentences)
+            ,Practice("翻译", R.drawable.orange,Constants.translating),Practice("Talk To Bot", R.drawable.grape,Constants.talkToBot),Practice("Coming Soon", R.drawable.mango,Constants.comingSoon))
+//        val testPractices = mutableListOf(Practice("背单词", R.drawable.apple),Practice("阅读模式", R.drawable.banana),Practice("句子跟读", R.drawable.cherry)
+//            ,Practice("翻译", R.drawable.orange),Practice("Talk To Bot", R.drawable.grape),Practice("Coming Soon", R.drawable.mango),Practice("背单词", R.drawable.apple),Practice("阅读模式", R.drawable.banana),Practice("句子跟读", R.drawable.cherry)
+//            ,Practice("翻译", R.drawable.orange),Practice("Talk To Bot", R.drawable.grape),Practice("Coming Soon", R.drawable.mango),Practice("背单词", R.drawable.apple),Practice("阅读模式", R.drawable.banana),Practice("句子跟读", R.drawable.cherry)
+//            ,Practice("翻译", R.drawable.orange),Practice("Talk To Bot", R.drawable.grape),Practice("Coming Soon", R.drawable.mango))
     }
 }
