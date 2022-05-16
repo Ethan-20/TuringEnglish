@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TuringEnglish</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logo_content_description">TuringEnglish</string>
+    <string name="hint_username">username</string>
+    <string name="hint_password">password</string>
+    <string name="button_cancel">cancel</string>
+    <string name="shr_button_next">next</string>
 </resources>
