@@ -2,9 +2,7 @@ package com.example.turingenglish
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -21,6 +19,7 @@ import com.example.turingenglish.ui.PracticeAdapter
 import com.example.turingenglish.ui.PracticeViewModel
 import com.google.android.material.navigation.NavigationView
 
+
 class IndexActivity : AppCompatActivity() {
     private lateinit var mBinding: ActivityIndexBinding
     private lateinit var drawerLayout: DrawerLayout
@@ -29,10 +28,10 @@ class IndexActivity : AppCompatActivity() {
     private val TAG = "IndexActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setTransparent()
         initView()
         setContentView(mBinding.root)
         setSupportActionBar(mBinding.toolbar)
+        MyApplication.setTransparent(window,mBinding.toolbar)
         addSlideMenu()
         listenDrawerLayout()
         initRecyclerView()
@@ -49,7 +48,6 @@ class IndexActivity : AppCompatActivity() {
                     Constants.reciteWords -> {
                         //TODO 实现背单词
                         //val intent = Intent(MyApplication.context, VocabularyActivity::class.java)
-                        Log.d(TAG,"被点击了！！！！")
                         val intent = Intent(MyApplication.context, VocabularyActivity::class.java)
                         startActivity(intent)
                     }
@@ -94,12 +92,8 @@ class IndexActivity : AppCompatActivity() {
         }
     }
 
-    private fun setTransparent() {
-        val decorView = window.decorView
-        decorView.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-        window.statusBarColor = Color.TRANSPARENT
-    }
+
+
 
     private fun initView() {
         mBinding = ActivityIndexBinding.inflate(layoutInflater)

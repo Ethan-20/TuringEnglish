@@ -6,4 +6,6 @@
     <string name="hint_password">password</string>
     <string name="button_cancel">cancel</string>
     <string name="shr_button_next">next</string>
+    <string name="VocabularyToolBar"></string>
+    <string name="IndexToolBar" />
 </resources>

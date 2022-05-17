@@ -50,8 +50,6 @@ class PracticeAdapter(private val context: Context, private val practiceList: Li
         Glide.with(context).load(practice.imageId).into(holder.practiceImage)
         holder.itemView.setOnClickListener {
                mOnItemClickListener?.onItemClick(practice.practiceId)
-                Log.d("PracticeAdapter","mOnItemClickListener is null!!!")
-
             }
         }
 

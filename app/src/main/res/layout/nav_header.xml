@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:padding="10dp"
-    android:background="@color/design_default_color_secondary"
+    android:background="@color/colorBgLightBlackTop"
     android:layout_height="180dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="tonygreendev@gmail.com"
-        android:textColor="@color/black"
+        android:textColor="@color/colorLightBlueN"
         android:textSize="14sp" />
     <TextView
         android:id="@+id/userText"
@@ -26,6 +26,6 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/mailText"
         android:text="Tony Green"
-        android:textColor="@color/black"
+        android:textColor="@color/colorLightBlueN"
         android:textSize="14sp" />
 </RelativeLayout>

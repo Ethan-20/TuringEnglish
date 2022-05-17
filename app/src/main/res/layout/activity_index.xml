@@ -17,8 +17,8 @@
             android:background="@color/colorBgLightBlackTop"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:layout_scrollFlags="scroll|enterAlways|snap"
            />
+            <!--            app:layout_scrollFlags="scroll|enterAlways|snap"-->
         </com.google.android.material.appbar.AppBarLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
