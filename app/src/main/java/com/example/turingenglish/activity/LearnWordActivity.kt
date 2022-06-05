@@ -21,7 +21,7 @@ import com.example.turingenglish.model.ItemWordMeanChoice
 import com.example.turingenglish.ui.adapters.MeanChoiceAdapter
 
 class LearnWordActivity : BaseActivity(), View.OnClickListener {
-    private val mBinding = ActivityLearnWordBinding.inflate(layoutInflater)
+    private lateinit var mBinding : ActivityLearnWordBinding
     private lateinit var recyclerView: RecyclerView
 
     private lateinit var layoutDelete: RelativeLayout
@@ -86,7 +86,7 @@ class LearnWordActivity : BaseActivity(), View.OnClickListener {
     }
 
     private fun initView() {
-
+        mBinding = ActivityLearnWordBinding.inflate(layoutInflater)
         recyclerView = mBinding.recyclerviewWordMean
         layoutBottomReview = mBinding.layoutWordBottom
         layoutBottomLearn = mBinding.linearLearnControl

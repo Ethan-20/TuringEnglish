@@ -22,6 +22,7 @@ import android.widget.TextView
 import com.example.turingenglish.BaseActivity
 import com.example.turingenglish.MyApplication
 import com.example.turingenglish.R
+import com.example.turingenglish.activity.index.IndexActivity
 import com.example.turingenglish.databinding.ActivityMusicBinding
 import com.example.turingenglish.interfaces.IPlayerControl
 import com.example.turingenglish.interfaces.IPlayerControl.Companion.PLAY_STATE_PAUSE
@@ -60,17 +61,17 @@ class MusicActivity : BaseActivity() {
         setTransparent(window, mBinding.toolbar)
         //设置动画
         setAnimations()
+        registerReceiver()
     }
 
     //动态注册广播
     override fun onResume() {
-        registerReceiver()
         super.onResume()
     }
 
     //注销广播
     override fun onPause() {
-        unregisterReceiver()
+
         super.onPause()
 
     }
@@ -185,8 +186,7 @@ class MusicActivity : BaseActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
-                mIPlayerControl?.stopPlay()
-                finish()
+                ActivityCollector.startOtherActivity(this,IndexActivity::class.java)
             }
         }
         return true
@@ -211,7 +211,7 @@ class MusicActivity : BaseActivity() {
             mIPlayerControl?.UnRegisterViewController(mIPlayerControl!!)
             mPlayerConnection?.let { unbindService(it) }
         }
-
+        unregisterReceiver()
     }
 
 

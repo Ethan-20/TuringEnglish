@@ -57,13 +57,13 @@ class FinishActivity : BaseActivity() {
         val calID: Long = 1
         val beginTime = Calendar.getInstance()
         //开始时间 *年*月（0是一月）*时*分
-        beginTime.set(2022,6,7,9,0)
+        beginTime.set(2022,5,7,9,0)
 
         val beginTimeMills = beginTime.timeInMillis
         //结束时间
         val endTime = Calendar.getInstance()
         //结束的时间
-        endTime.set(2022,6,7,9,0)
+        endTime.set(2022,5,7,9,0)
         val endTimeMills = endTime.timeInMillis
         //事件内容
         val timeZone = TimeZone.getDefault().id
@@ -94,6 +94,7 @@ class FinishActivity : BaseActivity() {
             CalendarContract.Reminders.METHOD_ALERT)
         val remaindersUri = CalendarContract.Reminders.CONTENT_URI
         contentResolver.insert(remaindersUri, remainderValues)
+        //打开日历
         val intent = Intent(Intent.ACTION_VIEW)
         intent.data = Uri.parse("content://com.android.calendar/events/$eventId")
         startActivity(intent)

@@ -9,8 +9,8 @@
         android:id="@+id/iconImage"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@drawable/nav_icon"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:src="@drawable/cover" />
 
     <TextView
         android:id="@+id/mailText"

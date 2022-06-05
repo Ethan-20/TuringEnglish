@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
      android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/wyybg2"
+    android:background="@drawable/music_bg"
     >
     <FrameLayout android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -80,7 +80,7 @@
                         android:layout_height="280dp"
                         android:layout_centerInParent="true"
                         android:layout_marginTop="50dp"
-                        android:src="@drawable/cover" />
+                        android:src="@drawable/rotating_cover" />
                 </RelativeLayout>
 
                 <RelativeLayout

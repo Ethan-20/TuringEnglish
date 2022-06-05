@@ -66,7 +66,10 @@ class NetWorkStateReceiver : BroadcastReceiver (){
                 Toast.makeText(context, "网络已断开", Toast.LENGTH_SHORT).show()
             }
             else if(tempStr == "MOBILE"){
-                Toast.makeText(context, "现在正在连接的网络：移动数据，请注意流量的使用", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "现在连接的网络是移动数据，请注意流量的使用", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                Toast.makeText(context, "正在使用WIFI", Toast.LENGTH_SHORT).show()
             }
         }
     }

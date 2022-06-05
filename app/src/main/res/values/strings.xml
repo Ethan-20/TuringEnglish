@@ -13,4 +13,5 @@
     <string name="music_name">Eyes Blue Like The Atlantic</string>
     <string name="singer">Sista Prod/subvrbs</string>
     <string name="notify_tomorrow">开启明日打卡提醒</string>
+    <string name="shr_error_password">无效的密码</string>
 </resources>

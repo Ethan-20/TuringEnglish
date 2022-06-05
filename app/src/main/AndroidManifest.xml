@@ -31,7 +31,8 @@
 
         <activity
             android:name=".activity.MusicActivity"
-            android:exported="true">
+            android:exported="true"
+            android:launchMode="singleTask">
         </activity>
         <activity
             android:name=".activity.ReadingActivity"
@@ -52,16 +53,16 @@
         <activity
             android:name=".activity.index.IndexActivity"
             android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" >
-
         </activity>
 
         <receiver android:name=".receiver.NetWorkStateReceiver"
