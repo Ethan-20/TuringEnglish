@@ -21,6 +21,9 @@
             android:name=".activity.FinishActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.ComingActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.NotifyActivity"
             android:exported="false" />
 

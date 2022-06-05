@@ -18,6 +18,7 @@ import com.example.turingenglish.BaseActivity
 import com.example.turingenglish.Constants
 import com.example.turingenglish.MyApplication
 import com.example.turingenglish.R
+import com.example.turingenglish.activity.ComingActivity
 import com.example.turingenglish.activity.MusicActivity
 import com.example.turingenglish.databinding.ActivityIndexBinding
 import com.example.turingenglish.listener.OnItemClickListener
@@ -78,6 +79,8 @@ class IndexActivity : BaseActivity() {
 
                     Constants.comingSoon -> {
                         //TODO 敬请期待新功能
+                        val intent = Intent(MyApplication.context, ComingActivity::class.java)
+                        startActivity(intent)
                     }
                 }
             }
