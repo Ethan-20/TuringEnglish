@@ -8,4 +8,9 @@
     <string name="shr_button_next">next</string>
     <string name="VocabularyToolBar"></string>
     <string name="IndexToolBar" />
+    <string name="reading_title">reading_title</string>
+    <string name="reading_text">reading_text</string>
+    <string name="music_name">Eyes Blue Like The Atlantic</string>
+    <string name="singer">Sista Prod/subvrbs</string>
+    <string name="notify_tomorrow">开启明日打卡提醒</string>
 </resources>

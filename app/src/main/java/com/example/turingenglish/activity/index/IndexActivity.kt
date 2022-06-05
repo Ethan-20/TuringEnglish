@@ -1,4 +1,4 @@
-package com.example.turingenglish
+package com.example.turingenglish.activity.index
 
 import android.content.Context
 import android.content.Intent
@@ -8,30 +8,36 @@ import android.view.MenuItem
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.turingenglish.BaseActivity
+import com.example.turingenglish.Constants
+import com.example.turingenglish.MyApplication
+import com.example.turingenglish.R
+import com.example.turingenglish.activity.MusicActivity
 import com.example.turingenglish.databinding.ActivityIndexBinding
-import com.example.turingenglish.ui.OnItemClickListener
-import com.example.turingenglish.ui.PracticeAdapter
+import com.example.turingenglish.listener.OnItemClickListener
+import com.example.turingenglish.ui.adapters.PracticeAdapter
 import com.example.turingenglish.ui.PracticeViewModel
 import com.google.android.material.navigation.NavigationView
 
 
-class IndexActivity : AppCompatActivity() {
+class IndexActivity : BaseActivity() {
     private lateinit var mBinding: ActivityIndexBinding
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navView : NavigationView
     lateinit var recyclerView :RecyclerView
-    private val TAG = "IndexActivity"
+     val TAG = "IndexActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initView()
         setContentView(mBinding.root)
         setSupportActionBar(mBinding.toolbar)
-        MyApplication.setTransparent(window,mBinding.toolbar)
+        setTransparent(window, mBinding.toolbar)
         addSlideMenu()
         listenDrawerLayout()
         initRecyclerView()
@@ -41,19 +47,21 @@ class IndexActivity : AppCompatActivity() {
         val layoutManager = GridLayoutManager(this,2)
         recyclerView = mBinding.recyclerView
         recyclerView.layoutManager = layoutManager
-        val adapter = PracticeAdapter(this,PracticeViewModel.practices)
+        val adapter = PracticeAdapter(PracticeViewModel.practices)
         adapter.setOnItemClickListener(object : OnItemClickListener {
             override fun onItemClick(Id:Int) {
                 when (Id) {
                     Constants.reciteWords -> {
                         //TODO 实现背单词
-                        //val intent = Intent(MyApplication.context, VocabularyActivity::class.java)
                         val intent = Intent(MyApplication.context, VocabularyActivity::class.java)
                         startActivity(intent)
+
                     }
 
                     Constants.Reading -> {
                         //TODO 实现阅读
+                        val intent = Intent(MyApplication.context, MusicActivity::class.java)
+                        startActivity(intent)
                     }
 
                     Constants.followingSentences -> {
@@ -64,7 +72,7 @@ class IndexActivity : AppCompatActivity() {
                         //TODO 实现翻译
                     }
 
-                    Constants.talkToBot->{
+                    Constants.talkToBot ->{
                         //TODO 实现AI对话
                     }
 

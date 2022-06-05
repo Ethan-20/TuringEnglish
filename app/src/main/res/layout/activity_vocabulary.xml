@@ -66,7 +66,14 @@
                         android:textColor="@color/colorFontInBlue"
                         android:textSize="13sp"
                         android:textStyle="bold" />
-
+                    <TextView
+                        android:id="@+id/text_main_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="APR"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorFontInBlue"
+                        android:textSize="7sp" />
                 </LinearLayout>
 
             </RelativeLayout>
@@ -153,14 +160,6 @@
 
                     </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/text_main_month"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="APR"
-                        android:textAllCaps="true"
-                        android:textColor="@color/colorFontInBlue"
-                        android:textSize="7sp" />
 
                 </LinearLayout>
 
@@ -238,6 +237,7 @@
                                             android:layout_marginStart="7dp"
                                             android:textColor="@color/colorFontWhite"
                                             android:textSize="19sp"
+                                            android:text="simultaneously"
                                             android:textStyle="bold" />
 
                                     </LinearLayout>
@@ -249,6 +249,7 @@
                                         android:background="?android:attr/selectableItemBackground"
                                         android:ellipsize="end"
                                         android:padding="20dp"
+                                        android:text="adv.	同时; 联立; 急切地;"
                                         android:textColor="@color/colorFontWhite"
                                         android:textSize="15sp" />
 
@@ -384,9 +385,9 @@
                         android:gravity="center"
                         android:paddingTop="17dp"
                         android:paddingBottom="17dp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="20sp"
-                        android:text="开启今日单词任务"
+                        android:text="开始背单词"
                         android:textStyle="bold" />
 
                 </androidx.cardview.widget.CardView>

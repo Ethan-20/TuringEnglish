@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="englishLearning"></dbname>
+    <version value="1"></version>
+    <list>
+        <mapping class="com.example.turingenglish.database.User"></mapping>
+        <mapping class="com.example.turingenglish.database.Word"></mapping>
+        <mapping class="com.example.turingenglish.database.MyDate"></mapping>
+        <mapping class="com.example.turingenglish.database.Interpretation"></mapping>
+        <mapping class="com.example.turingenglish.database.Phrase"></mapping>
+        <mapping class="com.example.turingenglish.database.Sentence"></mapping>
+        <mapping class="com.example.turingenglish.database.UserConfig"></mapping>
+        <mapping class="com.example.turingenglish.database.LearnTime"></mapping>
+        <mapping class="com.example.turingenglish.database.WordFolder"></mapping>
+        <mapping class="com.example.turingenglish.database.FolderLinkWord"></mapping>
+    </list>
+</litepal>

@@ -12,5 +12,6 @@ class Constants {
         const val translating = 4
         const val talkToBot = 5
         const val comingSoon = 6
+
     }
 }
